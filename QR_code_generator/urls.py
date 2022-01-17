@@ -27,8 +27,6 @@ urlpatterns = [
 
     path('',mainapp.views.index,name='index_url'), #homepage
     path('download/',mainapp.views.download,name='download_url'), #download page
-    path('pdf/',mainapp.views.pdf_downloader,name='pdf_downloader_url'), #pdf_downloader page
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) #(getting url address)Handling all mediafiles like(image,pdf,mp4,etc..)

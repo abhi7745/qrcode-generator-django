@@ -65,16 +65,11 @@
     <div class="card-body">
       <h5 class="card-title">Your Qr-Code </h5>
       <p class="card-text">The created QR code is 100% free but if the content is static, so download it</p>
-      <a href="{% static 'MyQrcode.png' %}" download="{% static 'MyQrcode.png' %}" class="btn btn-primary">Download Image</a>
-      
-    <!--condition for genarate pdf -->
-      {% if not pdf %}
-      <a href="{% url 'pdf_downloader_url' %}" class="btn btn-primary">Generate PDF</a><br><br>
 
-      <!--condition for download pdf -->
-      {% else %}
+      <a href="{% static 'MyQrcode.png' %}" download="{% static 'MyQrcode.png' %}" class="btn btn-primary">Download Image</a>
+  
       <a href="{% static 'MyQrcode.pdf' %}" class="btn btn-primary" download="{% static 'MyQrcode.pdf' %}">Download Pdf</a><br><br>
-      {% endif %}
+    
 
       <a href="/" class="btn btn-primary">Back</a>
     </div>
